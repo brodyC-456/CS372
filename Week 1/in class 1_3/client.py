@@ -10,3 +10,4 @@ s.connect(server)
 data = s.recv(100)
 str = data.decode(errors="ignore")
 print(str)
+
