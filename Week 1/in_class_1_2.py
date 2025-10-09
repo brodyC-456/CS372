@@ -4,7 +4,7 @@ import socket
 s = socket.socket()
 
 # connect the socket to a server
-server = ('starwarstel.net', 23)
+server = ('flip.engr.oregonstate.edu', 23)
 s.connect(server)
 
 while True:
