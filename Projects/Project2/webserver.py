@@ -57,6 +57,7 @@ while True:
     if content == False:
         new_socket.sendall("HTTP/1.1 404 Not Found\r\nContent-Type: text/plain\r\nContent-Length: 13\r\nConnection: close\r\n\r\n404 not found".encode("ISO-8859-1"))
         new_socket.close()
+        continue
     content_length = len(content)
     new_socket.sendall(("HTTP/1.1 200 OK\r\nContent-Type: " + mime_type + "\r\nContent-Length: " + str(content_length) + "\r\nConnection: close\r\n\r\n" + content).encode("ISO-8859-1"))
     new_socket.close()
