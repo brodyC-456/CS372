@@ -15,7 +15,7 @@ def build_pseudo_ip(source, dest, length):
     bytestring += (source + dest + b'\x00' + b'\x06' + length)
     return bytestring
 
-"""Computes the checksum for our 0-chechsum tcp data"""
+"""Computes the checksum for our 0-checksum tcp data"""
 def compute_checksum(pseudo, tcp_data):
     # Add the pseudo header to our tcp data
     data = pseudo + tcp_data
